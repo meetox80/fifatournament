@@ -1,13 +1,28 @@
 ---
 
-	import Layout from '../layouts/Layout.astro';
+	import Landing from '../layouts/Landing.astro';
 
-	import Hero from '../components/Hero.astro';
+	import Hero from '../components/Index/Hero.astro';
+	import Sponsor from '../components/Index/Sponsor.astro';
+	import Regulamin from '../components/Index/Regulamin.astro';
+	import Footer from '../components/Index/Footer.astro';
 
 ---
 
-<Layout Title="Turniej FIFA">
-	<main>
+<Landing Title="Turniej FIFA - ZSTIO Jarosław">
+	<main class="bg-body">
 		<Hero/>
+		
+		<Sponsor/>
+		<Regulamin/>
+
+		<Footer/>
 	</main>
 </Layout>
+
+<style>
+.bg-body {
+    --tw-bg-opacity: 1;
+    background-color: rgba(14,15,17,var(--tw-bg-opacity))
+}
+</style>
