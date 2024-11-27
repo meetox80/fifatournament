@@ -1,4 +1,11 @@
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+import cloudflare from '@astrojs/cloudflare';
+
+import tailwind from '@astrojs/tailwind';
+
+export default defineConfig({
+  output: 'server',
+  adapter: cloudflare(),
+  integrations: [tailwind()]
+});
